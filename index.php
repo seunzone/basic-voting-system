@@ -10,7 +10,7 @@
     </head>
     <body>
 
-      <form action="index.html" method="post">
+      <form action="script.php" method="post">
         
         <h1>Welcome to the Online Voting System</h1>
         
@@ -29,7 +29,11 @@
           <legend><img src="img3.jpg">Chukwu Emeka</legend>
 
           <input type="checkbox" id="tobi" name="tobi">
-          <legend><img src="img4.jpg">Tobi Musa</legend>
+          <legend><img src="img4.jpg">Tobi Musa</legend> <br>
+
+          <legend>Drop a Comment</legend>
+          <textarea id="bio" name="info"></textarea>
+          
          
         
         </fieldset>
