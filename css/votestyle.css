@@ -1,0 +1,42 @@
+.votebackground{
+   background-color:#d5d5d5;
+   width: 100%;
+   height:800px;
+}
+
+.votebackground_button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 280px;
+    margin: auto;
+}
+
+.setupvote_box{
+    margin:5%;
+    float: left;
+    width:40%;
+    background-color: #d5d5d5;
+}
+
+.setupvote_form_box{
+    margin:auto;
+    width:40%;
+}
+
+.setup_form{
+  margin: auto;
+}
+
+.candidates{
+  padding:10px;
+   
+   margin-bottom: 20px;
+   width: 60%;
+   display:block;
+}
