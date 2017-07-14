@@ -28,7 +28,7 @@
                   select_candidate();
                 ?>
               </select>
-              <input type="submit" name="vote" value="vote" class="votebackground_button">
+              <input type="submit" name="submit" value= "vote" class="votebackground_button">
           </form>
         </div>
       </div>

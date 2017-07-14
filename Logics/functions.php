@@ -10,28 +10,34 @@
 		if(mysqli_num_rows($results) > 0){
 			foreach($results as $print)
 			{
-				 echo "<option value='{$print['election_type']}'>" . $print['election_type'] . "</option>";
+				 echo "<option value='{$print['election_type']}'>" . $print['election_type'] . "</option>" ."<br>";
 			}
 		}
 
 	}
 
-	// function display_candidates($type)
-	// {
-	// 	$sql = "SELECT * FROM election WHERE Election_type = '{$type}'";
-	// 	require "connect.php";
-	// 	$results = mysqli_query($con, $sql);
-	// 	echo $sql;
+	function display_candidates($type)
+	{
+		$sql = "SELECT * FROM election WHERE Election_type = '{$type}'";
+		require "connect.php";
+		$results = mysqli_query($con, $sql);
 		
-	// 	if(mysqli_num_rows($results) > 0){
-	// 		while($results)
-	// 		{
-	// 			 echo "<input type='radio' name='candidate' value='{$print['candidate1']}'>" . 
-	// 			 		$results['candidate1']. "<br>";
-	// 		}
-	// 	}
+		if(mysqli_num_rows($results) > 0){
+			while($row=mysqli_fetch_assoc($results))
+			{	
+				 echo "<input type='hidden' name='election_type' value='{$type}'>";
+				 echo "<input type='radio' name='candidate' value='{$row['candidate1']}'>" . 
+				 		$row['candidate1']. "<br>";
+				 echo "<input type='radio' name='candidate' value='{$row['candidate2']}'>" . 
+				 		$row['candidate2']. "<br>";
+				 echo "<input type='radio' name='candidate' value='{$row['candidate3']}'>" . 
+				 		$row['candidate3']. "<br>";
+				 echo "<input type='radio' name='candidate' value='{$row['candidate4']}'>" . 
+				 		$row['candidate4']. "<br>";
+			}
+		}
 
-	// }
+	}
 		
-	// display_candidates("Assistant captain");
+	//display_candidates("Assistant captain");
 ?>

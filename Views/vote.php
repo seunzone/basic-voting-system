@@ -12,14 +12,21 @@
     </head>
     <body>
       <h1> Voting system</h1>
+
       <div class="votebackground">
         <div class="setupvote_form_box">
             <form method="POST" action="../logics/store_vote.php" class="setup_form">
               
               <label for="candidate4"> Your Name : </label>
               <input type="text" name="voter_name" class="candidates">
-
-               <label for="candidate4">Comments :</label>
+              <label> Choose your candidate</label>
+              <br>
+              <?php
+                  $var = $_POST['vote'];
+                  require "../logics/functions.php";
+                  display_candidates($var);
+              ?>
+              <label for="candidate4">Comments :</label>
               <textarea name="comment" class="candidates"></textarea>
 
               <input type="submit" name="submit" class="votebackground_button">
