@@ -11,7 +11,7 @@
 		 die("connection error: ". mysql_connect_error());
 	}
 
-// 	else {
-// 		echo "connected to database successfully";
-// 	}
-// ?>
+	else {
+		echo "connected to database successfully";
+	}
+?>

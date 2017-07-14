@@ -19,9 +19,17 @@
           </a>
                   </div>
         <div class="setupvote_box">
-          <button class="votebackground_button">
-            Vote
-          </button>
+
+          <form action="views/vote.php" method="POST">
+            <label><h4>Select election to participate in</h4></label>
+              <select name="vote">
+                <?php 
+                  require "logics/functions.php";
+                  select_candidate();
+                ?>
+              </select>
+              <input type="submit" name="vote" value="vote" class="votebackground_button">
+          </form>
         </div>
       </div>
       
